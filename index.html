@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiMarket — Herramientas de Marketing Digital</title>
+  <meta name="description" content="Descubrí los mejores cursos y herramientas de marketing digital. Aprende email marketing, SEO, redes sociales, automatización e IA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">Digi<span>Market</span></a>
+      <div class="navbar__links">
+        <a href="#categorias">Categorías</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#productos">Catálogo</a>
+      </div>
+      <button class="navbar__menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    </div>
+    <div class="navbar__mobile" id="mobileMenu">
+      <a href="#categorias">Categorías</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#productos">Catálogo</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero__inner">
+      <div class="hero__badge">🚀 Marketing Digital</div>
+      <h1 class="hero__title">Potenciá tu negocio<br /><span>con las herramientas correctas</span></h1>
+      <p class="hero__sub">Encontrá los mejores cursos y recursos de marketing digital, seleccionados para que aprendas y crezcas en serio.</p>
+      <div class="hero__actions">
+        <a href="#productos" class="btn btn--primary">Ver catálogo</a>
+        <a href="#categorias" class="btn btn--ghost">Explorar categorías</a>
+      </div>
+    </div>
+    <div class="hero__bg-shapes" aria-hidden="true">
+      <span class="shape shape--1"></span>
+      <span class="shape shape--2"></span>
+    </div>
+  </header>
+
+  <!-- CATEGORÍAS -->
+  <section class="section" id="categorias">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Categorías</h2>
+        <p class="section__sub">Elegí tu área de interés</p>
+      </div>
+      <div class="categories" id="categoriesGrid">
+        <!-- Renderizado dinámico -->
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTRO + CATÁLOGO -->
+  <section class="section section--gray" id="productos">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Catálogo completo</h2>
+        <p class="section__sub">Todos los recursos disponibles</p>
+      </div>
+
+      <!-- Barra de filtros -->
+      <div class="filters" id="filtersBar">
+        <button class="filter-btn active" data-cat="todos">Todos</button>
+        <!-- Botones de categoría se agregan dinámicamente -->
+      </div>
+
+      <!-- Búsqueda -->
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar cursos, herramientas..." />
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <!-- Grid de productos -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Skeletons iniciales -->
+        <div class="skeleton-card skeleton-card--tall"></div>
+        <div class="skeleton-card skeleton-card--tall"></div>
+        <div class="skeleton-card skeleton-card--tall"></div>
+        <div class="skeleton-card skeleton-card--tall"></div>
+        <div class="skeleton-card skeleton-card--tall"></div>
+        <div class="skeleton-card skeleton-card--tall"></div>
+      </div>
+
+      <!-- Estado vacío -->
+      <div class="empty-state hidden" id="emptyState">
+        <div class="empty-state__icon">🔎</div>
+        <h3>Sin resultados</h3>
+        <p>Probá con otra búsqueda o categoría.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="navbar__logo">Digi<span>Market</span></span>
+        <p>Los mejores recursos de marketing digital, en un solo lugar.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Categorías</h4>
+        <ul id="footerCats"></ul>
+      </div>
+      <div class="footer__legal">
+        <p>© 2026 DigiMarket. Sitio de afiliados.</p>
+        <p>Los enlaces son de afiliado. Al comprar podés generar una comisión para el sitio.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
